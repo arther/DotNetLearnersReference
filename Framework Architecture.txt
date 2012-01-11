@@ -1,0 +1,20 @@
+10.01.2012
+
+1. Framework Architecture:
+	(c#,vb,js,other Lang) -> CLS -> CTS -> FCL -> CLR
+	
+2. CTS:
+	Basic Value Type
+	Type Composition
+	Type Safety
+	Objects
+	Interface 
+	Delegates
+
+3. Runtime is developed using C++
+4. Framework is developed in C#
+5. CLR
+	JIT
+	Garbage Collector
+	CTS
+	Exception - Handler
