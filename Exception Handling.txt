@@ -1,0 +1,12 @@
+11.01.2012
+
+Exception Handling:
+	
+	1. Execution of Exception Handling.
+	2. Exception Handling Mechanism
+	3. SEH
+	4. Try, Catch, Finally Blocks
+	5. CLS - compliant, Non CLS - Compliant
+	6. RuntimeWrappedException
+	7. Throwing an Exception
+	8. Defining our own Exception Class
