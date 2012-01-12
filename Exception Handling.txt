@@ -2,11 +2,37 @@
 
 Exception Handling:
 	
-	1. Execution of Exception Handling.
-	2. Exception Handling Mechanism
+	1. Evolution of Exception Handling:
+		Developers found it difficult to find the exact exception using win32 & com exception reporting.  It looks very hard to find the correct exception using 
+an Integer value.  In order to make the developers understanding the exact exception, the new Exception Handling Mechanism evolves.
+
+	2. Exception Handling Mechanism:
+		It is working through try, catch, finally blocks.  Once the exception occurs, CLR will throw the exception to the caller.  Then its caller's responsibility
+to handle the exception. If CLR do not find any handler, it will halt the program execution.
+
 	3. SEH
+		Exception Class: .Net have seperate classes for Exceptions. System.Exception is the base for exception.  All other exception classes are Exception derived.
+    		Throwable Member: It is responsible for throw the exception when occurs.
+
 	4. Try, Catch, Finally Blocks
+		Try - It contains the code which may create exception.
+		Catch - This block will contain the code to handle the exception.
+		Finally - Code in this block will execute whether execption occured or not.
+
 	5. CLS - compliant, Non CLS - Compliant
+		CLR allow to throw any object.  CLS - Compliant will allow to throw only instance of Exception-derived class.  		
+		Non CLS - Compliant will allow to throw anything like int, String,etc.   
+
 	6. RuntimeWrappedException
+		This is a class which is used to convert Non CLS-Compliant exceptions as CLS-Compliant Exceptions.
+
 	7. Throwing an Exception
+		We must decide 2 things before throw an exception.
+		1. What Exception-derived type must thrown.
+		2. What message must be send.
+
 	8. Defining our own Exception Class
+		1. We can create our own exception by inherting System.Exception or any Exception derived class.
+		2. Since System.Exception has Four constructors (3- public, 1 - protected), we also must implement at least 3 constructors in our Exception class. 
+		3. Protected Constructor is not needed in case of sealed Exception class.
+		4. Exception class be serializable in order to store in log or db.
